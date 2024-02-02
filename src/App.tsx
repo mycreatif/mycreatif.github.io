@@ -7,8 +7,12 @@ import "atropos/css";
 import "swiper/css";
 
 const App = () => {
+  const apiKey = import.meta.env.VITE_MAPS_API_KEY;
+
+  console.log(apiKey);
+
   return (
-    <APIProvider apiKey={"AIzaSyCmTwL0R0hEc7sncY65IMsyc0QsKbXpc80"}>
+    <APIProvider apiKey={apiKey}>
       <RouterProvider router={router} />
     </APIProvider>
   );

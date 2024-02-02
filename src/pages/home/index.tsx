@@ -11,13 +11,8 @@ import {
   MdOutlineLocationOn,
 } from "react-icons/md";
 
-// import logo from "../../assets/logo-large-dark.png";
-// import logoSmall from "../../assets/logo-dark.png";
-// import map from "../../assets/images/map.jpg";
 import { Map, Marker } from "@vis.gl/react-google-maps";
 import { useEffect, useRef, useState } from "react";
-
-// import VisibilitySensor from "react-visibility-sensor";
 
 import cloud from "../../assets/images/cloud.png";
 import growth from "../../assets/images/growth.png";
@@ -37,16 +32,8 @@ export const HomePage = () => {
   const position = { lat: -34.4723, lng: -58.5144 };
   const [count, setCount] = useState(0);
 
-  // const [state, setState] = useState(false);
-
   useEffect(() => {
     let counts = setInterval(updated, 50);
-    // if (state) counts = setInterval(updated, 50);
-    // else {
-    //   clearInterval(counts);
-    //   setCount(0);
-    // }
-
     if (count > 1000) {
       clearInterval(counts);
       setCount(1000);
@@ -55,7 +42,6 @@ export const HomePage = () => {
       setCount((prev) => prev + 1);
     }
   }, [count]);
-  // }, [count, state]);
 
   const ref = useRef<any>(null);
 
@@ -70,9 +56,6 @@ export const HomePage = () => {
     <div>
       <div className="section sectionTitle big">
         <div className="card-fixed slide-right">
-          {/* <div className="bigLogo">
-          <img width={25} src={logoSmall} alt="creatif logo" />
-        </div> */}
           <h1>
             Construimos marcas, creamos conexiones, impulsamos resultados.
           </h1>
@@ -115,16 +98,11 @@ export const HomePage = () => {
 
       <div className="section">
         <div className="cardGroup">
-          {/* <VisibilitySensor
-            onChange={(isVisible: boolean) => {
-              setState(isVisible);
-            }}
-          > */}
           <SimpleCard>
             <div className="cardTitle">+{count}</div>
             <span className="title bold">Usuarios</span>
           </SimpleCard>
-          {/* </VisibilitySensor> */}
+
           <SimpleCard>
             <div className="rate">
               4.5 <FaStar />
@@ -145,8 +123,6 @@ export const HomePage = () => {
         <h1>Testimonios</h1>
 
         <Swiper
-          // install Swiper modules
-          // modules={[Navigation, Pagination, Scrollbar, A11y]}
           modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
           effect="fade"
           spaceBetween={50}
@@ -159,8 +135,6 @@ export const HomePage = () => {
             disableOnInteraction: false,
           }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             {({ isActive }) => (
@@ -229,13 +203,10 @@ export const HomePage = () => {
       <div className="section">
         <h1>Donde encontrarnos</h1>
         <div className="horizontal middle wrap">
-          {/* <div className="middle"> */}
           <div className="border w-50 h-100">
-            {/* <img src={map} style={{ borderRadius: "7px" }} /> */}
             <Map center={position} zoom={12}>
               <Marker position={position} />
             </Map>
-            {/* </div> */}
           </div>
           <ul className="container">
             <div style={{ padding: "20px 0" }}>
@@ -251,7 +222,7 @@ export const HomePage = () => {
               <p style={{ margin: "-5px 0" }}>
                 <MdOutlineEmail /> Email
               </p>
-              <li className="title bold purple">mycreatif@gmail.com</li>
+              <li className="title bold purple">mycreatif.store@gmail.com</li>
             </div>
 
             <div style={{ padding: "20px 0" }}>
