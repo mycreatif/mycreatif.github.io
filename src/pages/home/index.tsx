@@ -27,6 +27,7 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
+import { CONTACTS } from "../../utils";
 
 export const HomePage = () => {
   const position = { lat: -34.4723, lng: -58.5144 };
@@ -202,7 +203,7 @@ export const HomePage = () => {
 
       <div className="section">
         <h1>Donde encontrarnos</h1>
-        <div className="horizontal middle wrap">
+        <div className="horizontal wrap">
           <div className="border w-50 h-100">
             <Map center={position} zoom={12}>
               <Marker position={position} />
@@ -210,26 +211,39 @@ export const HomePage = () => {
           </div>
           <ul className="container">
             <div style={{ padding: "20px 0" }}>
-              <p style={{ margin: "-5px 0" }}>
+              <li
+                style={{
+                  margin: "5px 0",
+                  listStyle: "none",
+                }}
+              >
                 <MdOutlineLocationOn /> Buenos aires, Argentina
-              </p>
-              <li className="title bold purple">
-                Av. Centenario 235, San Isidro
               </li>
+              <li className="title purple">{CONTACTS.address}</li>
             </div>
 
             <div style={{ padding: "20px 0" }}>
-              <p style={{ margin: "-5px 0" }}>
+              <li
+                style={{
+                  margin: "5px 0",
+                  listStyle: "none",
+                }}
+              >
                 <MdOutlineEmail /> Email
-              </p>
-              <li className="title bold purple">mycreatif.store@gmail.com</li>
+              </li>
+              <li className="title purple">{CONTACTS.mail}</li>
             </div>
 
             <div style={{ padding: "20px 0" }}>
-              <p style={{ margin: "-5px 0" }}>
+              <li
+                style={{
+                  margin: "5px 0",
+                  listStyle: "none",
+                }}
+              >
                 <MdWhatsapp /> Whatsapp
-              </p>
-              <li className="title bold purple"> 1166934739</li>
+              </li>
+              <li className="title purple">{CONTACTS.phone}</li>
             </div>
           </ul>
         </div>

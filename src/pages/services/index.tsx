@@ -15,6 +15,8 @@ export const ServicePage = () => {
         <button>Diseño UX/UI</button>
         <button>Marketing</button>
         <button>Diseño gráfico</button>
+        <button>Armado de CV y Portfolio</button>
+        <button>Impresiones</button>
       </div>
     </div>
   );
