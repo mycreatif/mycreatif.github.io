@@ -1,9 +1,4 @@
-import {
-  Divider,
-  GoDownButton,
-  SimpleCard,
-  TestimonyCard,
-} from "../../components";
+import { Divider, SimpleCard, TestimonyCard } from "../../components";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import {
   MdOutlineEmail,
