@@ -7,7 +7,6 @@ import {
 } from "react-icons/md";
 
 import { Map, Marker } from "@vis.gl/react-google-maps";
-import { useEffect, useRef, useState } from "react";
 
 import cloud from "../../assets/images/cloud.png";
 import growth from "../../assets/images/growth.png";
@@ -26,20 +25,6 @@ import { CONTACTS } from "../../utils";
 
 export const HomePage = () => {
   const position = { lat: -34.4723, lng: -58.5144 };
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let counts = setInterval(updated, 50);
-    if (count > 1000) {
-      clearInterval(counts);
-      setCount(1000);
-    }
-    function updated() {
-      setCount((prev) => prev + 1);
-    }
-  }, [count]);
-
-  const ref = useRef<any>(null);
 
   // const handleClick = () => {
   //   ref.current?.scrollIntoView({
@@ -59,7 +44,7 @@ export const HomePage = () => {
         {/* <GoDownButton onClick={handleClick} /> */}
       </div>
 
-      <div className="section space" ref={ref}>
+      <div className="section space">
         <div className="ad-wrapper right zoomtext">
           <img alt="image home creatif ads" src={growth} />
           <h1>impulsa tu negocio</h1>
@@ -95,7 +80,7 @@ export const HomePage = () => {
       <div className="section">
         <div className="cardGroup">
           <SimpleCard>
-            <div className="cardTitle">+{count}</div>
+            <div className="cardTitle">+1000</div>
             <span className="title bold">Usuarios</span>
           </SimpleCard>
 
