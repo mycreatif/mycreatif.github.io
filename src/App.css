@@ -1187,4 +1187,23 @@ label {
   .swiper {
     max-width: 90dvw;
   }
+
+  .w-50 {
+    width: 100%;
+  }
+
+  .h-100 {
+    min-height: 300px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

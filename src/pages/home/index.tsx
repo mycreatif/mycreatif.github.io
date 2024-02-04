@@ -6,7 +6,7 @@ import {
   MdOutlineLocationOn,
 } from "react-icons/md";
 
-// import { Map, Marker } from "@vis.gl/react-google-maps";
+import { Map, Marker } from "@vis.gl/react-google-maps";
 import { useEffect, useRef, useState } from "react";
 
 import cloud from "../../assets/images/cloud.png";
@@ -14,14 +14,14 @@ import growth from "../../assets/images/growth.png";
 import web from "../../assets/images/web.png";
 import prints from "../../assets/images/prints.png";
 import logoweb from "../../assets/images/logoweb.png";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import {
-//   Navigation,
-//   Pagination,
-//   Scrollbar,
-//   A11y,
-//   Autoplay,
-// } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 import { CONTACTS } from "../../utils";
 
 export const HomePage = () => {
@@ -115,7 +115,7 @@ export const HomePage = () => {
           </SimpleCard>
         </div>
       </div>
-      {/* <div className="section swiper">
+      <div className="section swiper">
         <h1>Testimonios</h1>
 
         <Swiper
@@ -192,7 +192,7 @@ export const HomePage = () => {
             )}
           </SwiperSlide>
         </Swiper>
-      </div> */}
+      </div>
 
       <Divider />
 
@@ -200,9 +200,9 @@ export const HomePage = () => {
         <h1>Donde encontrarnos</h1>
         <div className="horizontal wrap">
           <div className="border w-50 h-100">
-            {/* <Map center={position} zoom={12}>
+            <Map center={position} zoom={12}>
               <Marker position={position} />
-            </Map> */}
+            </Map>
           </div>
           <ul className="container">
             <div style={{ padding: "20px 0" }}>
