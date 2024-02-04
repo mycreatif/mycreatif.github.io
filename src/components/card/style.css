@@ -52,7 +52,6 @@
   border: 1px solid #590fb7;
   border-radius: 8px;
   padding: 30px 60px;
-  max-width: 150px;
   background-color: white;
   width: 120px;
 }
@@ -158,6 +157,10 @@
 
 @media screen and (max-width: 600px) {
   .service-card {
+    width: 100%;
+  }
+
+  .simpleCard {
     width: 100%;
   }
 }

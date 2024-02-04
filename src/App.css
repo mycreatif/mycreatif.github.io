@@ -1182,3 +1182,9 @@ body > footer {
 label {
   text-align: left;
 }
+
+@media screen and (max-width: 600px) {
+  .swiper {
+    max-width: 90dvw;
+  }
+}

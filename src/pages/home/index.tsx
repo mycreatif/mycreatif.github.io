@@ -46,22 +46,22 @@ export const HomePage = () => {
 
   const ref = useRef<any>(null);
 
-  const handleClick = () => {
-    ref.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
+  // const handleClick = () => {
+  //   ref.current?.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   });
+  // };
 
   return (
     <div>
-      <div className="section sectionTitle big">
+      <div className="section">
         <div className="card-fixed slide-right">
           <h1>
             Construimos marcas, creamos conexiones, impulsamos resultados.
           </h1>
         </div>
-        <GoDownButton onClick={handleClick} />
+        {/* <GoDownButton onClick={handleClick} /> */}
       </div>
 
       <div className="section space" ref={ref}>
@@ -120,7 +120,7 @@ export const HomePage = () => {
           </SimpleCard>
         </div>
       </div>
-      <div className="section">
+      <div className="section swiper">
         <h1>Testimonios</h1>
 
         <Swiper
