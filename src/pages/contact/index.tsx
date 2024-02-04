@@ -36,7 +36,7 @@ export const ContactPage = () => {
 
         <div className="formGroup">
           <label>Servicio</label>
-          <select id="service" {...register("service")}>
+          <select id="service" defaultValue="" {...register("service")}>
             <option value="" disabled>
               Selecciona un servicio...
             </option>

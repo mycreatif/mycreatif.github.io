@@ -51,7 +51,7 @@ export const Header = () => {
         </div>
         <div className="logo">
           <a href="/">
-            <img src={logo} width={25} alt="creatif logo" />
+            <img src={logo} width={20} alt="creatif logo" />
           </a>
         </div>
         <div className="menu-toggle" onClick={handleMenu}>
