@@ -136,3 +136,41 @@
     max-width: 100%;
   }
 }
+
+.service-card {
+  border: 1px solid #590fb7;
+  border-radius: 8px;
+  padding: 30px 20px;
+  background-color: white;
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #590fb7;
+  -webkit-box-shadow: 6px 6px 0px #590fb7;
+  -moz-box-shadow: 6px 6px 0px #590fb7;
+  box-shadow: 6px 6px 0px #590fb7;
+}
+
+@media screen and (max-width: 600px) {
+  .service-card {
+    width: 100%;
+  }
+}
+
+.service-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.service-content span {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}

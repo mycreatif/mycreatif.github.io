@@ -6,6 +6,6 @@ export const currencyFormat = (value: number, fixed?: number) => {
 
 export const CONTACTS = {
   mail: "mycreatif.store@gmail.com",
-  phone: "+59 11 6678-4938",
+  phone: "+54 11 6678-4938",
   address: "Av. Centenario 235, San Isidro",
 };

@@ -2,7 +2,7 @@ import { useCart } from ".";
 import { ItemType } from "../types";
 import { currencyFormat } from "../utils";
 
-const PHONE_NUMBER = "+5491169188393";
+const PHONE_NUMBER = "+5491166784938";
 
 const WPP_URL = "https://api.whatsapp.com/send";
 

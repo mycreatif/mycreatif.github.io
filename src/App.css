@@ -998,6 +998,11 @@ body > footer {
   gap: 20px;
 }
 
+.wrap-s {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .logo-about {
   max-height: 108px;
 }
