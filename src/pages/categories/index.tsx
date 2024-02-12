@@ -3,7 +3,7 @@ import { PromoCard } from "../../components";
 export const CategoryPage = () => {
   return (
     <div className="section-fixed centered-row">
-      <PromoCard
+      {/* <PromoCard
         title="Pack 1"
         description="Incluye hasta 5 stickers"
         price={1500}
@@ -17,7 +17,8 @@ export const CategoryPage = () => {
         title="Pack 1"
         description="Incluye hasta 5 stickers"
         price={1500}
-      />
+      /> */}
+      En construcción...
     </div>
   );
 };
