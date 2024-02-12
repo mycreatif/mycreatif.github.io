@@ -1,4 +1,4 @@
-import { PromoCard } from "../../components";
+// import { PromoCard } from "../../components";
 
 export const CategoryPage = () => {
   return (
