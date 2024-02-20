@@ -44,6 +44,13 @@
   box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
+.img-item {
+  width: 150px;
+  max-height: 180px;
+  border-radius: 4px;
+  /* box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1); */
+}
+
 .simpleCard {
   display: flex;
   flex-direction: column;
@@ -54,6 +61,41 @@
   padding: 30px 60px;
   background-color: white;
   width: 120px;
+}
+
+.add {
+  /* font-weight: 900; */
+  /* color: #590fb7; */
+  cursor: pointer;
+  padding: 2px 8px;
+  /* border: 1px solid #590fb7; */
+  border-radius: 100%;
+  font-size: 15px;
+  width: auto;
+  color: white;
+  background-color: #590fb7;
+  /* -webkit-box-shadow: 4px 4px 0px #590fb7;
+  -moz-box-shadow: 4px 4px 0px #590fb7;
+  box-shadow: 4px 4px 0px #590fb7; */
+}
+
+.small {
+  font-size: 1px;
+}
+
+.priceCard {
+  border: 1px solid #590fb7;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  width: 200px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonyCard {
@@ -69,15 +111,20 @@
 .pricing {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   color: #590fb7;
-  font-size: 30px;
-  text-align: center;
 }
 
 .pricing span {
-  margin-top: 20px;
-  font-size: 20px;
+  font-size: 12px;
+}
+
+.pricing-span {
+  padding: 7px 3px;
+}
+
+.price-number {
+  font-size: 2rem !important;
+  font-weight: 700;
 }
 
 .card-fixed {

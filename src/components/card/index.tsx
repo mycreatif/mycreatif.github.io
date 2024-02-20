@@ -67,3 +67,33 @@ export const PromoCard = ({ title, description, price }: promoCardProps) => {
     </div>
   );
 };
+
+export const PriceCard = ({ img, title, price }: CardProps) => {
+  const { addItem } = useCart();
+
+  const handleClick = () => {
+    addItem({
+      name: title,
+      price: price ?? 0,
+      quantity: 1,
+    });
+  };
+
+  return (
+    <div className="priceCard">
+      <img src={img} alt="Avatar" className="img-item" />
+      <div className="container">
+        <h3>
+          <b>{title}</b>
+        </h3>
+        <div className="price-container">
+          <div className="pricing">
+            <span className="pricing-span">$</span>
+            <span className="price-number">{currencyFormat(price ?? 0)}</span>
+          </div>
+          <button onClick={handleClick}>Agregar</button>
+        </div>
+      </div>
+    </div>
+  );
+};

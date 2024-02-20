@@ -919,7 +919,7 @@ body > footer {
 .list {
   padding-top: 16px;
   display: flex;
-  gap: 25px;
+  gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
 }
