@@ -1,21 +1,51 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { toast, Toaster } from "sonner";
+import { useState } from "react";
+import { BeatLoader } from "react-spinners";
 
 type Inputs = {
-  name: string;
-  email: string;
-  service: string;
-  description: string;
+  user_name: string;
+  user_email: string;
+  user_service: string;
+  message: string;
 };
 
 export const ContactPage = () => {
+  const [disabled, setDisabled] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log("logged data: ", data);
+    if (
+      data.user_name === "" ||
+      data.user_email === "" ||
+      data.user_service === "" ||
+      data.message === ""
+    ) {
+      toast.error("Completá los campos vacíos");
+      return;
+    }
+    setIsLoading(true);
+    setDisabled(true);
+    emailjs
+      .send("service_f7eppin", "template_vm1115j", data, "pq28DoAmviFtOgiYB")
+      .then(() => {
+        toast.success("Mensaje enviado");
+      })
+      .catch(() => {
+        toast.error("Error al enviar mensaje");
+      })
+      .finally(() => {
+        setIsLoading(false);
+        setDisabled(false);
+      });
   };
 
   const { handleSubmit, register } = useForm<Inputs>();
 
   return (
     <div>
+      <Toaster richColors />
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="card-fixed slide-right"
@@ -28,15 +58,23 @@ export const ContactPage = () => {
         </h4>
         <div className="formGroup">
           <label>Nombre</label>
-          <input type="text" placeholder="Tu nombre.." {...register("name")} />
+          <input
+            type="text"
+            placeholder="Tu nombre.."
+            {...register("user_name")}
+          />
 
           <label>Correo electrónico</label>
-          <input type="email" placeholder="Tu email.." {...register("email")} />
+          <input
+            type="email"
+            placeholder="Tu email.."
+            {...register("user_email")}
+          />
         </div>
 
         <div className="formGroup">
           <label>Servicio</label>
-          <select id="service" defaultValue="" {...register("service")}>
+          <select id="service" defaultValue="" {...register("user_service")}>
             <option value="" disabled>
               Selecciona un servicio...
             </option>
@@ -50,11 +88,13 @@ export const ContactPage = () => {
 
         <div className="formGroup">
           <label>Descripción</label>
-          <textarea {...register("description")} />
+          <textarea {...register("message")} />
         </div>
 
         {/* <input type="submit" value="Submit" /> */}
-        <button type="submit">Contactar</button>
+        <button disabled={isLoading || disabled} type="submit">
+          {isLoading ? <BeatLoader color="#590fb7" /> : "Contactar"}
+        </button>
       </form>
     </div>
   );
