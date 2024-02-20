@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "sonner";
 import { useState } from "react";
 import { BeatLoader } from "react-spinners";
+import { useLocation } from "react-router-dom";
 
 type Inputs = {
   user_name: string;
@@ -12,6 +13,8 @@ type Inputs = {
 };
 
 export const ContactPage = () => {
+  const { state } = useLocation();
+
   const [disabled, setDisabled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -74,7 +77,11 @@ export const ContactPage = () => {
 
         <div className="formGroup">
           <label>Servicio</label>
-          <select id="service" defaultValue="" {...register("user_service")}>
+          <select
+            id="service"
+            defaultValue={state?.service ?? ""}
+            {...register("user_service")}
+          >
             <option value="" disabled>
               Selecciona un servicio...
             </option>
@@ -83,6 +90,10 @@ export const ContactPage = () => {
             <option value="Diseño UX/UI">Diseño UX/UI</option>
             <option value="Marketing">Marketing</option>
             <option value="Diseño gráfico">Diseño gráfico</option>
+            <option value="Armado de CV y Portfolio">
+              Armado de CV y Portfolio
+            </option>
+            <option value="Impresiones">Impresiones</option>
           </select>
         </div>
 

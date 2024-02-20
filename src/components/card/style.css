@@ -153,6 +153,7 @@
   -webkit-box-shadow: 6px 6px 0px #590fb7;
   -moz-box-shadow: 6px 6px 0px #590fb7;
   box-shadow: 6px 6px 0px #590fb7;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {

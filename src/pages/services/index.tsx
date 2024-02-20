@@ -5,6 +5,7 @@ import { LuPrinter } from "react-icons/lu";
 import { SlSocialInstagram } from "react-icons/sl";
 import { FaFigma } from "react-icons/fa";
 import { GrDocumentPerformance } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
 
 export const Icon = ({ size, icon }: any) => {
   return (
@@ -88,6 +89,17 @@ export const ServicePage = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleClick = (service: string) => {
+    switch (service) {
+      case "Impresiones":
+        return navigate("/prints");
+      default:
+        return navigate("/contact", { state: { service } });
+    }
+  };
+
   return (
     <div>
       <div className="card-fixed slide-right">
@@ -100,7 +112,11 @@ export const ServicePage = () => {
       </div>
       <div className="section-fixed wrap-s middle">
         {services.map((service) => (
-          <div className="service-card" key={service.name}>
+          <div
+            className="service-card"
+            key={service.name}
+            onClick={() => handleClick(service.name)}
+          >
             <Icon size={50} icon={service.icon} />
             <div className="service-content">
               {service.name}
