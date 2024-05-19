@@ -33,7 +33,7 @@ export const HomePage = () => {
   //   });
   // };
 
-  const customRef = useRef(null);
+  const customRef = useRef<null | HTMLElement>(null);
 
   const handleScroll = () =>
     customRef?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
