@@ -77,6 +77,13 @@ body {
   padding: 0 20px;
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   transition: background-color 0.1s linear, border-color 0.1s linear,
     color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
@@ -956,6 +963,15 @@ body > footer {
   text-align: left;
 }
 
+.section-banner {
+  transition: all 0.2s ease-in-out;
+  padding: 50px 0 0 0;
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+  text-align: left;
+}
+
 .section-fixed {
   padding: 50px 0 0 0;
 }
@@ -1160,6 +1176,24 @@ body > footer {
   transform: translateX(-100%);
 }
 
+.slide-right-1 {
+  animation: 0.2s slide-right 0.2s forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slide-right-2 {
+  animation: 0.4s slide-right 0.4s forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slide-right-3 {
+  animation: 0.6s slide-right 0.6s forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
 .slide-right h4 {
   animation: 0.2s slide-right 0.2s forwards;
   opacity: 0;
@@ -1206,4 +1240,20 @@ label {
     justify-content: center;
     align-items: center;
   }
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #590fb7;
+  border-radius: 8px;
+  background-color: white;
+  margin: 10px;
+}
+
+.text-left {
+  text-align: left;
 }

@@ -7,7 +7,7 @@ export const RootLayout = () => {
     <div className="centered">
       <Header />
       <CartPanel />
-      <div className="content">
+      <div className="layout">
         <Outlet />
       </div>
       <Footer />

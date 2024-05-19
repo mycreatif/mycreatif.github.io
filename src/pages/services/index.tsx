@@ -6,6 +6,7 @@ import { SlSocialInstagram } from "react-icons/sl";
 import { FaFigma } from "react-icons/fa";
 import { GrDocumentPerformance } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
+import { useNotificationService } from "../../hooks";
 
 export const Icon = ({ size, icon }: any) => {
   return (
@@ -37,7 +38,7 @@ export const Icon = ({ size, icon }: any) => {
   );
 };
 
-export const ServicePage = () => {
+export const ServicePage = ({ customRef, simple = false }: any) => {
   const services = [
     {
       name: "Diseño Web/Mobile",
@@ -47,11 +48,18 @@ export const ServicePage = () => {
     },
 
     {
-      name: "Community Management",
+      name: "Ilustraciones",
       description:
-        "Gestión estratégica de la presencia online, interactuando y construyendo relaciones con la audiencia en plataformas sociales.",
+        "Aquí encontrarás retratos emotivos, escenas vibrantes y adorables dibujos de mascotas. Cada obra es una muestra única de talento y creatividad, diseñada para inspirar y deleitar.",
       icon: <SlSocialInstagram />,
     },
+
+    // {
+    //   name: "Community Management",
+    //   description:
+    //     "Gestión estratégica de la presencia online, interactuando y construyendo relaciones con la audiencia en plataformas sociales.",
+    //   icon: <SlSocialInstagram />,
+    // },
 
     {
       name: "Diseño UX/UI",
@@ -89,12 +97,14 @@ export const ServicePage = () => {
     },
   ];
 
+  const { buyIllustrations } = useNotificationService();
+
   const navigate = useNavigate();
 
   const handleClick = (service: string) => {
     switch (service) {
-      case "Impresiones":
-        return navigate("/prints");
+      // case "Impresiones":
+      //   return navigate("/prints");
       default:
         return navigate("/contact", { state: { service } });
     }
@@ -102,20 +112,35 @@ export const ServicePage = () => {
 
   return (
     <div>
-      <div className="card-fixed slide-right">
-        <h1>Nuestros servicios</h1>
-        <h4>
-          Aquí encontrarás variedad de servicios que ofrecemos para imprimir,
-          desde tus recuerdos en polaroid hasta las piezas graficas para tu
-          negocio.
-        </h4>
-      </div>
+      {simple ? (
+        <div>
+          <h1 ref={customRef}>Nuestros servicios</h1>
+          <h4>
+            Aquí encontrarás variedad de servicios que ofrecemos para imprimir,
+            desde tus recuerdos en polaroid hasta las piezas graficas para tu
+            negocio.
+          </h4>
+        </div>
+      ) : (
+        <div className="card-fixed slide-right">
+          <h1>Nuestros servicios</h1>
+          <h4>
+            Aquí encontrarás variedad de servicios que ofrecemos para imprimir,
+            desde tus recuerdos en polaroid hasta las piezas graficas para tu
+            negocio.
+          </h4>
+        </div>
+      )}
       <div className="section-fixed wrap-s middle">
         {services.map((service) => (
           <div
             className="service-card"
             key={service.name}
-            onClick={() => handleClick(service.name)}
+            onClick={
+              service.name === "Ilustraciones"
+                ? () => buyIllustrations()
+                : () => handleClick(service.name)
+            }
           >
             <Icon size={50} icon={service.icon} />
             <div className="service-content">

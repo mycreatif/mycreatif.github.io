@@ -7,7 +7,7 @@ import "./style.css";
 
 export const AboutPage = () => {
   return (
-    <div>
+    <div className="content">
       <div className="card-fixed slide-right">
         <h1>Sobre nosotros</h1>
         <h4>

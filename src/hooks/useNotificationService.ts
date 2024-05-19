@@ -31,5 +31,14 @@ export const useNotificationService = () => {
         return openWpp(messageBuilder(PHONE_NUMBER, msg));
       }
     },
+    buyIllustrations: (message?: string) => {
+      if (message) {
+        console.log(message);
+      } else {
+        const msg = `Hola, estoy interesado en una ilustracion personalizada.`;
+
+        return openWpp(messageBuilder(PHONE_NUMBER, msg));
+      }
+    },
   };
 };

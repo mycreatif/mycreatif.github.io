@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import { PrintsLayout, RootLayout } from "../components";
+import { RootLayout } from "../components";
 import {
-  PrintsPage,
+  // PrintsPage,
   ContactPage,
   AboutPage,
-  ServicePage,
+  // ServicePage,
   HomePage,
-  CategoryPage,
+  // CategoryPage,
 } from ".";
 
 export const router = createBrowserRouter([
@@ -18,24 +18,24 @@ export const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
-      {
-        path: "services",
-        element: <ServicePage />,
-      },
-      {
-        path: "prints",
-        element: <PrintsLayout />,
-        children: [
-          {
-            index: true,
-            element: <PrintsPage />,
-          },
-          {
-            path: "stickers",
-            element: <CategoryPage />,
-          },
-        ],
-      },
+      // {
+      //   path: "services",
+      //   element: <ServicePage />,
+      // },
+      // {
+      //   path: "prints",
+      //   element: <PrintsLayout />,
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <PrintsPage />,
+      //     },
+      //     {
+      //       path: "stickers",
+      //       element: <CategoryPage />,
+      //     },
+      //   ],
+      // },
       {
         path: "about",
         element: <AboutPage />,

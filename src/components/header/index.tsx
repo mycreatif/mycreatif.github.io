@@ -10,14 +10,14 @@ const sections = [
     name: "Inicio",
     url: "/",
   },
-  {
-    name: "Servicios",
-    url: "services",
-  },
-  {
-    name: "Impresiones",
-    url: "prints",
-  },
+  // {
+  //   name: "Servicios",
+  //   url: "services",
+  // },
+  // {
+  //   name: "Impresiones",
+  //   url: "prints",
+  // },
   {
     name: "Nosotros",
     url: "about",
@@ -46,9 +46,9 @@ export const Header = () => {
   return (
     <header className="site-header">
       <div className="site-identity">
-        <div className="mobile-cart">
+        {/* <div className="mobile-cart">
           <CartButton />
-        </div>
+        </div> */}
         <div className="logo">
           <a href="/">
             <img src={logo} width={20} alt="creatif logo" />
@@ -69,11 +69,11 @@ export const Header = () => {
               {section.name}
             </li>
           ))}
-          <li>
+          {/* <li>
             <div className="web-cart">
               <CartButton />
             </div>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

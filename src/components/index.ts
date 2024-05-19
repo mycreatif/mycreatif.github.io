@@ -6,3 +6,4 @@ export * from "./avatar";
 export * from "./divider";
 export * from "./godown";
 export * from "./cart";
+export * from "./banner";

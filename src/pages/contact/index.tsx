@@ -47,7 +47,7 @@ export const ContactPage = () => {
   const { handleSubmit, register } = useForm<Inputs>();
 
   return (
-    <div>
+    <div className="content">
       <Toaster richColors />
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -99,7 +99,16 @@ export const ContactPage = () => {
 
         <div className="formGroup">
           <label>Descripción</label>
-          <textarea {...register("message")} />
+          <textarea
+            defaultValue={
+              state?.service
+                ? `
+          Hola! Estoy interesado en el servicio de ${state?.service ?? ""}.
+          `
+                : ""
+            }
+            {...register("message")}
+          />
         </div>
 
         {/* <input type="submit" value="Submit" /> */}
