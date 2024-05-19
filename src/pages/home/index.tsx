@@ -33,7 +33,7 @@ export const HomePage = () => {
   //   });
   // };
 
-  const customRef = useRef(null);
+  const customRef = useRef<null | HTMLElement>(null);
 
   const handleScroll = () =>
     customRef?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -182,13 +182,8 @@ export const HomePage = () => {
                   <div className={isActive ? "section" : "disable"}>
                     <TestimonyCard>
                       <p>
-                        "Creatif hizo un trabajo excepcional al diseñar nuestro
-                        sitio web. Capturaron perfectamente nuestra visión y la
-                        convirtieron en una experiencia en línea cautivadora. Su
-                        enfoque creativo y atención al detalle realmente
-                        marcaron la diferencia. ¡Recomendaría a Creatif a
-                        cualquiera que busque servicios de diseño web de alta
-                        calidad!"
+                        "Recomendaría a Creatif a cualquiera que busque
+                        servicios de diseño web de alta calidad!"
                       </p>
                       <span className="title left purple">
                         - Antonella Endrizzi
@@ -202,14 +197,8 @@ export const HomePage = () => {
                   <div className={isActive ? "section" : "disable"}>
                     <TestimonyCard>
                       <p>
-                        "Estamos encantados con los servicios de marketing
-                        digital de Creatif. Nos ayudaron a desarrollar una
-                        estrategia efectiva que aumentó significativamente
-                        nuestra presencia en línea y generó un mayor tráfico a
-                        nuestro sitio web. Su equipo experto en marketing
-                        realmente comprende las últimas tendencias y sabe cómo
-                        destacar en un mercado competitivo. ¡Gracias a Creatif,
-                        estamos viendo resultados positivos!"
+                        "Hermosos trabajos, siempre dispuestos a todo! Me
+                        encanto la agenda pixar!"
                       </p>
                       <span className="title left purple">
                         - Antonella Tello
@@ -223,20 +212,8 @@ export const HomePage = () => {
                   <div className={isActive ? "section" : "disable"}>
                     <TestimonyCard>
                       <p>
-                        "Creatif ha elevado nuestra presencia visual con sus
-                        servicios de impresión de alta calidad. Desde banners
-                        vibrantes que capturan la esencia de nuestra marca hasta
-                        cuadros y polaroids que han transformado nuestro
-                        espacio, Creatif ha demostrado ser un socio excepcional
-                        en el ámbito de la impresión. La atención meticulosa al
-                        detalle y la entrega puntual de cada proyecto nos han
-                        dejado impresionados. Si buscas servicios de impresión
-                        que realmente destaquen, Creatif es la elección
-                        acertada. Estamos agradecidos por la creatividad y
-                        profesionalismo que han aportado a nuestra empresa. Sin
-                        duda, recomendamos sus servicios de impresión a
-                        cualquier empresa que busque destacar visualmente en el
-                        mercado."
+                        "Increíble calidad y servicio! Creatif superó mis
+                        expectativas. Muy recomendado."
                       </p>
                       <span className="title left purple">
                         - Bruno Alexander Tobar León
