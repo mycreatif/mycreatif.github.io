@@ -1,6 +1,6 @@
 import "./style.css";
 import logo from "../../assets/logo-dark.png";
-import { CartButton } from "..";
+// import { CartButton } from "..";
 import { useNavigate } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import { useCart } from "../../hooks";
